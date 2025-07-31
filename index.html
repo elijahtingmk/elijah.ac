@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elijah Ting - Corporate Trainer & Facilitator</title>
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .swoosh-bg {
+            background-image: 
+                radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 52% 99%, hsla(355, 98%, 71%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 10% 29%, hsla(256, 96%, 68%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.1) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900">
+                <a href="#">Elijah Ting</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
+                <a href="#programs" class="text-gray-600 hover:text-blue-600 transition duration-300">Programs</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition duration-300">Testimonials</a>
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Let's Collaborate</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+            <a href="#programs" class="block py-2 text-gray-600 hover:text-blue-600">Programs</a>
+            <a href="#testimonials" class="block py-2 text-gray-600 hover:text-blue-600">Testimonials</a>
+            <a href="#contact" class="block mt-2 bg-blue-600 text-white text-center px-4 py-2 rounded-md hover:bg-blue-700">Let's Collaborate</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="swoosh-bg py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">Elijah Ting (Ting Moi Kieng)</h1>
+                <p class="mt-4 text-lg md:text-xl text-blue-700 font-semibold">Corporate Trainer & Train-the-Trainer Facilitator</p>
+                <p class="mt-2 text-md md:text-lg text-gray-600 max-w-3xl mx-auto">Specializing in Communication & Adult Learning, helping professionals and organizations level up their training capability and leadership impact.</p>
+            </div>
+        </section>
+
+       <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <!-- Main Bio and Photo Grid -->
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <!-- Photo -->
+                    <div class="order-last md:order-first flex justify-center items-center">
+                        <img src="assets/images/profile-photo.jpg" alt="Portrait of Elijah Ting" class="w-80 h-80 rounded-full object-cover border-4 border-white shadow-xl mb-8"> 
+                    </div>
+                    <!-- Bio -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Who is Elijah?</h2>
+                        <p class="text-gray-600 mb-4">Elijah Ting is a corporate trainer and Train-the-Trainer facilitator focused on communication and adult learning.</p>
+                        <p class="text-gray-600">With extensive experience in both delivering and co-facilitating TTT programs, Elijah helps professionals, educators, and organizations level up their training capability and leadership impact.</p>
+                    </div>
+                </div>
+                <!-- Education & Qualifications Section (Moved outside the grid) -->
+                <div class="mt-20">
+                     <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Education & Qualifications</h3>
+                        <ul class="space-y-4 max-w-4xl mx-auto">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0121 12c0 6.627-5.373 12-12 12S3 18.627 3 12a12.083 12.083 0 012.84-6.422L12 14z"></path></svg>
+                                <div>
+                                    <h4 class="font-semibold">Executive Master of Business Administration</h4>
+                                    <p class="text-sm text-gray-500">Quantic School of Business and Technology, 2020</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-9-8.994v10.994l9-5.5-9-5.5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.253v8.994l-9 5.5-9-5.5V3.253l9 5.5 9-5.5z"></path></svg>
+                                <div>
+                                    <h4 class="font-semibold">Master of Divinity</h4>
+                                    <p class="text-sm text-gray-500">Methodist Theological School, 2003</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v4.517l1.557.778a2 2 0 01.89 1.789l.002 4.184a2 2 0 01-1.89 1.789l-1.557.778V20l-1 1H8l-1-1v-2.517l-1.557-.778a2 2 0 01-.89-1.789l-.002-4.184a2 2 0 011.89-1.789L8 10.517V5l-1-1z"></path></svg>
+                                <div>
+                                    <h4 class="font-semibold">Bachelor of Science with Honours (Nursing)</h4>
+                                    <p class="text-sm text-gray-500">Universiti Malaysia Sarawak, 2001</p>
+                                </div>
+                            </li>
+                            <li class="pt-4 border-t border-gray-200 mt-4 flex items-start">
+                                <svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                                <div>
+                                    <h4 class="font-semibold">Professional Qualifications</h4>
+                                    <p class="text-sm text-gray-500">HRD Corp Accredited Trainer, CERTIFIED FINANCIAL PLANNER™, Certified Workplace Big Five Profile™ & Career Direct® Consultant</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Philosophy -->
+        <section class="py-20 swoosh-bg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">My Training Philosophy</h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">My goal is not just to train but to inspire transformation of careers and lives.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-bold text-blue-600 mb-3">Beyond Knowledge Transfer</h3>
+                        <p class="text-gray-600">Training is more than just knowledge transfer or skill development—it is life impacting life.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-bold text-blue-600 mb-3">Transformative Learning</h3>
+                        <p class="text-gray-600">True learning doesn't just change what people know; it transforms how they connect, communicate, and grow.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-xl font-bold text-blue-600 mb-3">Lasting Change</h3>
+                        <p class="text-gray-600">My goal is not just to train but to inspire transformation of careers and lives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- My Passion Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12">My Passion</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.636-6.364l-.707-.707M12 21v-1m-6.364-1.636l.707-.707M6.121 6.121l.707.707"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Inspire Transformation</h3>
+                        <p class="text-gray-600">Creating lasting organizational change.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m12 0a2 2 0 100-4m0 4a2 2 0 110-4M6 12a2 2 0 100-4m0 4a2 2 0 110-4m12 0a2 2 0 100-4m0 4a2 2 0 110-4M12 18v-2m0 2a2 2 0 100 4m0-4a2 2 0 110 4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Equip Professionals</h3>
+                        <p class="text-gray-600">Developing skills for impactful learning experiences.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Cultivate Empathy</h3>
+                        <p class="text-gray-600">Building meaningful relationships in and beyond the workplace.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Core Programs</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <!-- Train the Trainer Program -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Train the Trainer Program</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Effective approaches to adult learning</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Clear and impactful delivery techniques</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Managing diverse groups</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Evaluating learning outcomes</li>
+                        </ul>
+                    </div>
+                    <!-- Workplace Communication Program -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Workplace Communication Program</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Empathic Listening & Emotional Awareness</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Communicating needs without blame</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Transforming conflicts into opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Storytelling Coach GPT -->
+        <section class="py-20 bg-blue-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-900">Storytelling Coach GPT</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Elevate your narrative skills with personalized AI-powered guidance.</p>
+                </div>
+                <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Narrative Structure</h4>
+                        <p class="text-gray-600">Learn the essential elements of compelling stories.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Creative Prompts</h4>
+                        <p class="text-gray-600">Get inspiration and ideas for your stories.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Feedback & Refinement</h4>
+                        <p class="text-gray-600">Improve your storytelling with personalized guidance.</p>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="https://chatgpt.com/g/g-jXwWYgjvc-storytelling-coach" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">Explore my Storytelling Coach GPT</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">What Clients Say</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <p class="text-gray-600 italic">"Thank you Elijah Ting! For the 5 days of training us to be the best trainer versions of ourselves. Your personal story on your training journey has been very inspiring."</p>
+                        <p class="mt-4 font-semibold text-right text-gray-800">- KK, Training Participant</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <p class="text-gray-600 italic">"Thank you for guiding us throughout and the joyful learning sessions."</p>
+                        <p class="mt-4 font-semibold text-right text-gray-800">- CL, Training Participant</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <p class="text-gray-600 italic">"Muy bueno y con geniales ideas para las historias (Very good and with great ideas for stories)"</p>
+                        <p class="mt-4 font-semibold text-right text-gray-800">- Spanish User on Storytelling Coach GPT</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Training Approach -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">My Training Approach</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-100 p-4 rounded-full mb-3"><svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg></div>
+                        <h4 class="font-semibold">Interactive Workshops</h4>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-100 p-4 rounded-full mb-3"><svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V7a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></div>
+                        <h4 class="font-semibold">Case Studies</h4>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-100 p-4 rounded-full mb-3"><svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div>
+                        <h4 class="font-semibold">Role-Playing</h4>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-100 p-4 rounded-full mb-3"><svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
+                        <h4 class="font-semibold">Group Discussions</h4>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-100 p-4 rounded-full mb-3"><svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></div>
+                        <h4 class="font-semibold">Reflective Exercises</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+                <div class="space-y-4" id="faq-container">
+                    <!-- FAQ items will be injected here by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-blue-600 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold">Let's Collaborate</h2>
+                <p class="mt-4 text-lg max-w-2xl mx-auto text-blue-100">Ready to transform your organization's communication culture? Contact me today to discuss your training needs and discover how we can create lasting positive change in your workplace.</p>
+                <a href="https://wa.me/message/DTN4ST4TTRBWG1" target="_blank" rel="noopener noreferrer" class="mt-8 inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300 shadow-md">Get In Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Ting Moi Kieng. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ data
+        const faqs = [
+            {
+                question: "What makes Nonviolent Communication different from other communication approaches?",
+                answer: "Nonviolent Communication (NVC) focuses on deep listening and expressing oneself from a place of authenticity and empathy. Unlike other methods that might focus on persuasion or debate, NVC aims to create a quality of connection where everyone's needs are valued, fostering collaboration and mutual understanding."
+            },
+            {
+                question: "How long does it typically take to see results from NVC training?",
+                answer: "Participants often report immediate shifts in their perspective and interactions after just one workshop. However, mastering NVC is a journey. Lasting change depends on consistent practice and integration. Typically, organizations see noticeable improvements in team dynamics and communication effectiveness within a few months of sustained training and practice."
+            },
+            {
+                question: "Can NVC training be customized for our specific industry or challenges?",
+                answer: "Absolutely. All training programs are tailored to meet the unique needs of your organization. We'll work together to identify your specific challenges, goals, and industry context to ensure the content, case studies, and role-playing scenarios are highly relevant and impactful for your team."
+            }
+        ];
+
+        // FAQ accordion functionality
+        const faqContainer = document.getElementById('faq-container');
+        faqs.forEach((faq, index) => {
+            const faqItem = document.createElement('div');
+            faqItem.className = 'border border-gray-200 rounded-lg';
+            faqItem.innerHTML = `
+                <button class="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800 hover:bg-gray-50 focus:outline-none">
+                    <span>${faq.question}</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="px-5 pb-5 text-gray-600 hidden">
+                    <p>${faq.answer}</p>
+                </div>
+            `;
+            faqContainer.appendChild(faqItem);
+        });
+
+        faqContainer.addEventListener('click', (e) => {
+            const button = e.target.closest('button');
+            if (button) {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            }
+        });
+    </script>
+</body>
+</html>
