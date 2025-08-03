@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聆聽神聲音・課程行銷海報</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .poster-container {
+            background: linear-gradient(135deg, #1c3b57 0%, #4a6a8a 100%);
+            color: #ffffff;
+            font-family: 'Noto Sans TC', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .poster-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .headline {
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        .key-icon {
+            font-size: 2rem;
+            color: #FFD700;
+            text-shadow: 0 0 10px #FFD700;
+        }
+        .btn-cta {
+            background-color: #FFD700;
+            color: #1c3b57;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster-container">
+        <div class="poster-card w-full max-w-2xl rounded-2xl shadow-2xl p-8 md:p-12 text-center">
+
+            <header class="mb-8">
+                <p class="text-lg md:text-xl font-semibold text-gray-200 tracking-wider">一場改變生命的對話</p>
+                <h1 class="headline text-5xl md:text-7xl font-bold my-3 text-white">聆聽神聲音</h1>
+                <p class="text-lg md:text-xl font-semibold text-gray-200">您是否渴望，與神建立更親密的雙向關係？</p>
+            </header>
+
+            <main class="my-10">
+                <h2 class="text-2xl font-bold mb-6 border-b-2 border-yellow-400 inline-block pb-2">解鎖四把關鍵鑰匙</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-left">
+                    <div class="flex items-center space-x-4">
+                        <div class="key-icon">🔑</div>
+                        <div>
+                            <h3 class="font-bold text-lg">安靜</h3>
+                            <p class="text-gray-300 text-sm">在神的同在中，找到內心的平靜</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="key-icon">🔑</div>
+                        <div>
+                            <h3 class="font-bold text-lg">辨認</h3>
+                            <p class="text-gray-300 text-sm">學會分辨神的聲音與自己的思緒</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="key-icon">🔑</div>
+                        <div>
+                            <h3 class="font-bold text-lg">看見</h3>
+                            <p class="text-gray-300 text-sm">開啟屬靈的視覺，領受從神而來的異象</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="key-icon">🔑</div>
+                        <div>
+                            <h3 class="font-bold text-lg">日誌</h3>
+                            <p class="text-gray-300 text-sm">用日誌記錄與神的對話，深化您的領受</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <section class="my-10 bg-white/10 p-6 rounded-lg">
+                <h3 class="text-xl font-bold mb-3">課程特色</h3>
+                <div class="flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0">
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-yellow-300">16</p>
+                        <p class="font-semibold">小時深度學習</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-yellow-300">4</p>
+                        <p class="font-semibold">大互動單元</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-black text-yellow-300">∞</p>
+                        <p class="font-semibold">生命轉化的機會</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="mt-8">
+                <p class="mb-6 text-gray-200">這不僅是一門課程，更是一趟與神同行的旅程。<br>立即報名，開始學習聆聽那改變您一生的聲音。</p>
+                <button href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn-cta font-bold py-3 px-8 rounded-full text-lg shadow-lg">
+                    了解更多 & 立即報名
+                </button>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
