@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聆聽神聲音・課程資訊圖表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #00A6ED, #7FB800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .key-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+            color: #FFB400;
+        }
+        .pillar {
+            background-color: #E9ECEF;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 700;
+            color: #495057;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 5px solid #ADB5BD;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black mb-2 gradient-text">聆聽神聲音</h1>
+            <p class="text-xl md:text-2xl font-bold text-gray-600">一場為期16小時的深度轉化之旅</p>
+            <p class="mt-4 text-gray-500 max-w-3xl mx-auto">本課程不僅是知識的傳遞，更是一系列互動式的操練，旨在幫助您與神建立更深、更活躍的雙向關係。讓我們透過數據，一窺這趟旅程的精彩結構。</p>
+        </header>
+
+        <main class="space-y-16">
+
+            <section id="overview" class="text-center">
+                <h2 class="text-3xl font-bold mb-2">課程結構總覽</h2>
+                <p class="text-gray-500 mb-8 max-w-2xl mx-auto">整個課程精心設計為四個環環相扣的單元，每個單元佔四小時，循序漸進地為您解鎖聆聽的奧秘。</p>
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="courseBreakdownChart"></canvas>
+                    </div>
+                    <p class="mt-6 font-semibold text-gray-700">16小時的旅程，均分為四個核心單元，確保您有充足的時間學習與內化每一把關鍵鑰匙。</p>
+                </div>
+            </section>
+            
+            <section id="keys-timeline">
+                <h2 class="text-3xl font-bold text-center mb-2">四把關鍵鑰匙：您的學習路徑</h2>
+                <p class="text-gray-500 text-center mb-12 max-w-2xl mx-auto">我們將帶您走過一條清晰的學習路徑，依序掌握四把開啟與神對話的關鍵鑰匙。</p>
+                <div class="relative w-full">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                        <div class="flex md:flex-col items-center text-center p-4">
+                            <div class="key-icon mb-4 md:mb-2">🔑</div>
+                            <h3 class="text-xl font-bold text-[#00A6ED]">第一把鑰匙：安靜</h3>
+                            <p class="text-sm text-gray-600 mt-2">學習在神的同在中安靜自己，為聆聽創造內在空間。</p>
+                        </div>
+                        <div class="flex md:flex-col items-center text-center p-4">
+                            <div class="key-icon mb-4 md:mb-2">🔑</div>
+                            <h3 class="text-xl font-bold text-[#7FB800]">第二把鑰匙：辨認</h3>
+                            <p class="text-sm text-gray-600 mt-2">理解神的聲音常以「自發性意念」出現，並學習分辨。</p>
+                        </div>
+                        <div class="flex md:flex-col items-center text-center p-4">
+                            <div class="key-icon mb-4 md:mb-2">🔑</div>
+                            <h3 class="text-xl font-bold text-[#FFB400]">第三把鑰匙：看見</h3>
+                            <p class="text-sm text-gray-600 mt-2">開啟屬靈的視覺能力，明白「異象」是神溝通的重要管道。</p>
+                        </div>
+                        <div class="flex md:flex-col items-center text-center p-4">
+                            <div class="key-icon mb-4 md:mb-2">🔑</div>
+                            <h3 class="text-xl font-bold text-[#F6511D]">第四把鑰匙：日誌</h3>
+                            <p class="text-sm text-gray-600 mt-2">使用「雙向日誌」記錄與神的對話，並學習整合與分辨。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="activities">
+                <h2 class="text-3xl font-bold text-center mb-2">不只是聽課，更是親身體驗</h2>
+                <p class="text-gray-500 text-center mb-8 max-w-2xl mx-auto">每個單元都充滿了互動活動與實踐。超過一半的時間，您將在實際操練中度過。</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                        <h3 class="text-2xl font-bold text-center mb-4">典型單元時間分配</h3>
+                        <div class="chart-container h-72 md:h-96">
+                            <canvas id="moduleTimeChart"></canvas>
+                        </div>
+                        <p class="mt-6 text-center font-semibold text-gray-700">理論與實踐並重，確保深度學習與內化。</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                            <h4 class="font-bold text-lg text-[#00A6ED]">💡 活動亮點 #1</h4>
+                            <p class="font-semibold mt-1">噪音大盤點</p>
+                            <p class="text-sm text-gray-600 mt-2">識別並處理生活中干擾您內心平靜的內外在噪音。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                            <h4 class="font-bold text-lg text-[#7FB800]">💡 活動亮點 #2</h4>
+                            <p class="font-semibold mt-1">聆聽操練實驗室</p>
+                            <p class="text-sm text-gray-600 mt-2">在安全的引導下，直接向神提問並練習聆聽祂的回應。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                            <h4 class="font-bold text-lg text-[#FFB400]">💡 活動亮點 #3</h4>
+                            <p class="font-semibold mt-1">異象代禱</p>
+                            <p class="text-sm text-gray-600 mt-2">學習在禱告中「觀看」，用神所賜的畫面為他人代求。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                            <h4 class="font-bold text-lg text-[#F6511D]">💡 活動亮點 #4</h4>
+                            <p class="font-semibold mt-1">雙向日誌操練</p>
+                            <p class="text-sm text-gray-600 mt-2">建立一個記錄您與神對話的習慣，捕捉寶貴的啟示。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="discernment">
+                <h2 class="text-3xl font-bold text-center mb-2">建立穩固的分辨框架</h2>
+                <p class="text-gray-500 text-center mb-12 max-w-2xl mx-auto">聆聽需要智慧。課程將教導您使用六根堅固的柱石來察驗與平衡所領受的一切，確保您的聆聽之旅走在健康、合乎聖經的道路上。</p>
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-10">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                        <div class="pillar">🏛️<br>聖經</div>
+                        <div class="pillar">🗣️<br>神的聲音</div>
+                        <div class="pillar">🧠<br>思想</div>
+                        <div class="pillar">❤️<br>內心見證</div>
+                        <div class="pillar">🤝<br>他人建議</div>
+                        <div class="pillar">🌳<br>生命果子</div>
+                    </div>
+                    <div class="w-full h-2 bg-gray-600 mt-4 rounded-full"></div>
+                    <p class="text-center mt-4 font-bold text-gray-700 text-lg">以神的話語為根基，平衡察驗</p>
+                </div>
+            </section>
+            
+            <section id="transformation">
+                <h2 class="text-3xl font-bold text-center mb-2">預期的轉化</h2>
+                <p class="text-gray-500 text-center mb-8 max-w-2xl mx-auto">我們的目標是顯著提升您在聆聽神聲音上的信心與能力。</p>
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                     <h3 class="text-2xl font-bold text-center mb-4">聆聽信心指數成長預測</h3>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="confidenceChart"></canvas>
+                    </div>
+                    <p class="mt-6 text-center font-semibold text-gray-700">透過系統性的學習與操練，您將從不確定走向充滿信心的聆聽生活。</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 border-t pt-8">
+            <p class="font-bold text-2xl gradient-text">立即開始您的聆聽之旅！</p>
+            <p class="text-gray-500 mt-2">這不僅是一門課程，更是您與神關係升級的起點。</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const wrapLabel = (label, maxWidth = 16) => {
+                if (label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxWidth) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+
+            const tooltipTitleCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            const vibrantPalette = ['#00A6ED', '#7FB800', '#FFB400', '#F6511D'];
+
+            const courseBreakdownCtx = document.getElementById('courseBreakdownChart').getContext('2d');
+            new Chart(courseBreakdownCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['第一單元：安靜', '第二單元：辨認', '第三單元：看見', '第四單元：日誌與分辨'],
+                    datasets: [{
+                        label: '課程時數',
+                        data: [4, 4, 4, 4],
+                        backgroundColor: vibrantPalette,
+                        borderColor: '#FFFFFF',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        ...tooltipTitleCallback.plugins,
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: {
+                                    size: 14,
+                                    family: "'Noto Sans TC', sans-serif"
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+
+            const moduleTimeCtx = document.getElementById('moduleTimeChart').getContext('2d');
+            new Chart(moduleTimeCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['典型4小時單元'],
+                    datasets: [
+                        {
+                            label: '教學與原則 (小時)',
+                            data: [1.5],
+                            backgroundColor: '#00A6ED',
+                        },
+                        {
+                            label: '小組討論/分享 (小時)',
+                            data: [1],
+                            backgroundColor: '#7FB800',
+                        },
+                        {
+                            label: '個人/團隊實踐 (小時)',
+                            data: [1.5],
+                            backgroundColor: '#F6511D',
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            stacked: true,
+                            max: 4,
+                            ticks: {
+                                callback: function(value) { return value + 'hr' }
+                            }
+                        },
+                        y: {
+                            stacked: true,
+                            ticks: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        ...tooltipTitleCallback.plugins,
+                        legend: {
+                            position: 'bottom'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.x !== null) {
+                                        label += context.parsed.x + ' 小時';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const confidenceCtx = document.getElementById('confidenceChart').getContext('2d');
+            new Chart(confidenceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['課程前', '課程後'],
+                    datasets: [{
+                        label: '聆聽信心指數 (滿分10)',
+                        data: [3.5, 8.5],
+                        backgroundColor: [
+                            'rgba(255, 180, 0, 0.5)',
+                            'rgba(127, 184, 0, 0.8)'
+                        ],
+                        borderColor: [
+                            '#FFB400',
+                            '#7FB800'
+                        ],
+                        borderWidth: 2,
+                        barThickness: 50
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 10
+                        }
+                    },
+                    plugins: {
+                        ...tooltipTitleCallback.plugins,
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
