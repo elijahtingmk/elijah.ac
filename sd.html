@@ -8,9 +8,7 @@
     <!-- Visualization & Content Choices: The primary "quantitative" data from the report (e.g., "$500,000/year cost of ambiguity") is best presented as a high-impact "Key Stat" callout. The core of the application is turning the text-heavy lesson plans into an interactive experience using a modal-based, tabbed interface for the course details (Goal: Organize/Inform, Method: JS-powered dynamic content display). The `dina_framework_map` is transformed from a static table into an interactive, filterable grid, allowing users to compare applications across roles (Goal: Compare/Organize, Method: JS-powered filtering). All diagrams and structures are built with HTML/CSS. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <title>Strategic Dialogue™ Professional Development</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -28,7 +26,9 @@
             }
         }
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -78,11 +78,11 @@
                 Strategic Dialogue™
             </a>
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#overview" class="text-slate-600 hover:text-brand-primary transition-colors">Framework</a>
-                <a href="#programs" class="text-slate-600 hover:text-brand-primary transition-colors">Programs</a>
-                <a href="#contact" class="text-slate-600 hover:text-brand-primary transition-colors">Contact</a>
+                <a href="#overview" class="text-slate-600 hover:text-indigo-700 transition-colors">Framework</a>
+                <a href="#programs" class="text-slate-600 hover:text-indigo-700 transition-colors">Programs</a>
+                <a href="#contact" class="text-slate-600 hover:text-indigo-700 transition-colors">Contact</a>
             </nav>
-            <a href="#contact" class="hidden md:inline-block bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-brand-secondary transition-all shadow-sm">
+            <a href="#contact" class="hidden md:inline-block bg-indigo-700 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-800 transition-all shadow-sm">
                 Request Consultation
             </a>
             <button id="mobile-menu-button" class="md:hidden text-slate-800">
@@ -95,10 +95,10 @@
             </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#overview" class="block py-2 text-slate-600 hover:text-brand-primary">Framework</a>
-            <a href="#programs" class="block py-2 text-slate-600 hover:text-brand-primary">Programs</a>
-            <a href="#contact" class="block py-2 text-slate-600 hover:text-brand-primary">Contact</a>
-            <a href="#contact" class="block mt-4 w-full text-center bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-brand-secondary transition-all">
+            <a href="#overview" class="block py-2 text-slate-600 hover:text-indigo-700">Framework</a>
+            <a href="#programs" class="block py-2 text-slate-600 hover:text-indigo-700">Programs</a>
+            <a href="#contact" class="block py-2 text-slate-600 hover:text-indigo-700">Contact</a>
+            <a href="#contact" class="block mt-4 w-full text-center bg-indigo-700 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-800 transition-all">
                 Request Consultation
             </a>
         </div>
@@ -116,7 +116,7 @@
                     The Strategic Dialogue™ program transforms communication from a soft skill into your company's most powerful strategic asset. We equip your teams with the proprietary <strong>DISA™ Framework</strong> to foster radical clarity, full accountability, and measurable results.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#programs" class="bg-brand-primary text-white font-semibold px-8 py-3 rounded-lg hover:bg-brand-secondary transition-all shadow-lg">
+                    <a href="#programs" class="bg-indigo-700 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-800 transition-all shadow-lg">
                         Explore Programs
                     </a>
                     <a href="#overview" class="bg-white text-slate-700 font-semibold px-8 py-3 rounded-lg hover:bg-slate-100 transition-all ring-1 ring-slate-300">
@@ -159,22 +159,22 @@
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
-                        <div class="bg-brand-light text-brand-text rounded-full h-12 w-12 flex items-center justify-center text-2xl font-bold">D</div>
+                        <div class="bg-indigo-100 text-indigo-900 rounded-full h-12 w-12 flex items-center justify-center text-2xl font-bold">D</div>
                         <h3 class="mt-6 text-xl font-bold text-slate-900">Data</h3>
                         <p class="mt-2 text-slate-600">Start with objective, verifiable facts. What a video camera would record, free of judgment or interpretation. This builds trust and a shared understanding of reality.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
-                        <div class="bg-brand-light text-brand-text rounded-full h-12 w-12 flex items-center justify-center text-2xl font-bold">I</div>
+                        <div class="bg-indigo-100 text-indigo-900 rounded-full h-12 w-12 flex items-center justify-center text-2xl font-bold">I</div>
                         <h3 class="mt-6 text-xl font-bold text-slate-900">Impact</h3>
                         <p class="mt-2 text-slate-600">Connect the data to its tangible consequences. Articulate the effect on the business, team, or project to answer the critical "So what?" question.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
-                        <div class="bg-brand-light text-brand-text rounded-full h-12 w-12 flex items-center justify-center text-2xl font-bold">S</div>
+                        <div class="bg-indigo-100 text-indigo-900 rounded-full h-12 w-12 flex items-center justify-center text-2xl font-bold">S</div>
                         <h3 class="mt-6 text-xl font-bold text-slate-900">Strategic Intent</h3>
                         <p class="mt-2 text-slate-600">Define your positive, forward-looking purpose for the conversation. This ensures the dialogue is constructive and aimed at a shared successful outcome.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all">
-                        <div class="bg-brand-light text-brand-text rounded-full h-12 w-12 flex items-center justify-center text-2xl font-bold">A</div>
+                        <div class="bg-indigo-100 text-indigo-900 rounded-full h-12 w-12 flex items-center justify-center text-2xl font-bold">A</div>
                         <h3 class="mt-6 text-xl font-bold text-slate-900">Actionable Step</h3>
                         <p class="mt-2 text-slate-600">Propose a specific, measurable, and owned commitment. This builds accountability and ensures every important conversation has a clear path forward.</p>
                     </div>
@@ -193,22 +193,22 @@
                 </div>
                 <div class="grid lg:grid-cols-3 gap-8">
                     <div class="border border-slate-200 rounded-xl p-8 flex flex-col">
-                        <h3 class="text-sm font-semibold text-brand-primary uppercase">FOUNDATIONS</h3>
+                        <h3 class="text-sm font-semibold text-indigo-700 uppercase">FOUNDATIONS</h3>
                         <p class="text-2xl font-bold text-slate-900 mt-2">SD 101: Strategic Dialogue™ Foundations</p>
                         <p class="mt-4 text-slate-600 flex-grow">The essential starting point for all employees. This workshop establishes a universal language for clear, objective, and productive communication using the <strong>DISA™ Framework</strong>.</p>
-                        <button data-course="sd101" class="open-modal-button mt-8 w-full bg-brand-primary text-white font-semibold py-3 rounded-lg hover:bg-brand-secondary transition-all">Learn More</button>
+                        <button data-course="sd101" class="open-modal-button mt-8 w-full bg-indigo-700 text-white font-semibold py-3 rounded-lg hover:bg-indigo-800 transition-all">Learn More</button>
                     </div>
                     <div class="border border-slate-200 rounded-xl p-8 flex flex-col">
-                        <h3 class="text-sm font-semibold text-brand-primary uppercase">LEADERSHIP</h3>
+                        <h3 class="text-sm font-semibold text-indigo-700 uppercase">LEADERSHIP</h3>
                         <p class="text-2xl font-bold text-slate-900 mt-2">SD 201: Strategic Dialogue™ for Leadership</p>
                         <p class="mt-4 text-slate-600 flex-grow">Equips managers and leaders with advanced applications of DISA™ for performance management, team alignment, conflict mediation, and leading organizational change.</p>
-                        <button data-course="sd201" class="open-modal-button mt-8 w-full bg-brand-primary text-white font-semibold py-3 rounded-lg hover:bg-brand-secondary transition-all">Learn More</button>
+                        <button data-course="sd201" class="open-modal-button mt-8 w-full bg-indigo-700 text-white font-semibold py-3 rounded-lg hover:bg-indigo-800 transition-all">Learn More</button>
                     </div>
                     <div class="border border-slate-200 rounded-xl p-8 flex flex-col">
-                        <h3 class="text-sm font-semibold text-brand-primary uppercase">MASTERY</h3>
+                        <h3 class="text-sm font-semibold text-indigo-700 uppercase">MASTERY</h3>
                         <p class="text-2xl font-bold text-slate-900 mt-2">SD 301: Coach & Facilitator</p>
                         <p class="mt-4 text-slate-600 flex-grow">A two-day intensive for senior leaders and HR partners to become internal champions, capable of coaching others and facilitating the most complex, high-stakes conversations.</p>
-                        <button data-course="sd301" class="open-modal-button mt-8 w-full bg-brand-primary text-white font-semibold py-3 rounded-lg hover:bg-brand-secondary transition-all">Learn More</button>
+                        <button data-course="sd301" class="open-modal-button mt-8 w-full bg-indigo-700 text-white font-semibold py-3 rounded-lg hover:bg-indigo-800 transition-all">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -243,12 +243,9 @@
                     <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300">
                         Let's discuss how the Strategic Dialogue™ program can be tailored to your organization's specific goals. Schedule a complimentary consultation with our team today.
                     </p>
-                    <form class="mt-12 max-w-xl mx-auto">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <input type="email" placeholder="you@company.com" required class="flex-grow px-4 py-3 rounded-md text-slate-900 focus:ring-2 focus:ring-brand-primary focus:outline-none">
-                            <button type="submit" class="bg-brand-primary text-white font-semibold px-8 py-3 rounded-md hover:bg-brand-secondary transition-all">Request Consultation</button>
-                        </div>
-                    </form>
+                    <div class="mt-12 text-center">
+                        <a href="https://wa.me/message/DTN4ST4TTRBWG1" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-700 text-white font-semibold px-8 py-3 rounded-md hover:bg-indigo-800 transition-all">Request Consultation</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -306,7 +303,7 @@
                     tabs: {
                         overview: { title: "Overview", content: `<h3 class="text-xl font-bold text-slate-900">Course Overview</h3><p class="mt-4 text-slate-600">This half-day workshop is the essential starting point for all employees, from individual contributors to senior leaders. It establishes a universal and effective communication methodology across the entire organization using the <strong>DISA™ Framework</strong>, reducing friction and accelerating results.</p><div class="mt-6 grid md:grid-cols-2 gap-6"><div><h4 class="font-semibold text-slate-800">Target Audience</h4><p class="text-slate-600">All employees</p></div><div><h4 class="font-semibold text-slate-800">Duration</h4><p class="text-slate-600">4 Hours (Half-Day Workshop)</p></div></div><h4 class="mt-6 font-semibold text-slate-800">Learning Outcomes</h4><ul class="mt-2 list-disc list-inside text-slate-600 space-y-1"><li>Distinguish between subjective judgment and objective <strong>Data</strong>.</li><li>Articulate the <strong>Impact</strong> of any situation on business outcomes.</li><li>Define their true <strong>Strategic Intent</strong> before any crucial communication.</li><li>Formulate a clear, compelling, and <strong>Actionable Step</strong>.</li><li>Confidently apply the full DISA™ model in real-world professional scenarios.</li></ul>`},
                         curriculum: { title: "Curriculum", content: `<h3 class="text-xl font-bold text-slate-900">Workshop Agenda</h3><ul class="mt-4 space-y-4"><li class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold text-slate-800">Module 1: The ROI of Clarity</p><p class="text-sm text-slate-600">Understanding the measurable cost of miscommunication and introduction to the <strong>DISA™ Framework</strong>.</p></li><li class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold text-slate-800">Module 2: Grounding in Data (The 'D')</p><p class="text-sm text-slate-600">Interactive workshop on separating objective facts from subjective stories to build trust.</p></li><li class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold text-slate-800">Module 3: Defining the Impact (The 'I')</p><p class="text-sm text-slate-600">Connecting data to tangible business consequences and professional stakes.</p></li><li class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold text-slate-800">Module 4: Clarifying Strategic Intent (The 'S')</p><p class="text-sm text-slate-600">Defining the positive purpose of a conversation to ensure it is constructive and forward-looking.</p></li><li class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold text-slate-800">Module 5: Committing to the Actionable Step (The 'A')</p><p class="text-sm text-slate-600">Crafting specific, measurable requests and commitments. Includes live role-play.</p></li></ul>`},
-                        application: { title: "Application", content: `<h3 class="text-xl font-bold text-slate-900">How You'll Apply DISA™</h3><p class="mt-4 text-slate-600">In SD 101, the focus is on mastering the core application of the framework for daily communication challenges.</p><div class="mt-6 space-y-4"><div class="p-4 bg-brand-light/50 rounded-lg border-l-4 border-brand-primary"><p class="font-semibold text-brand-text">Giving & Receiving Feedback</p><p class="text-sm text-slate-600">Structure feedback that is clear, objective, and focused on solutions, not blame.</p></div><div class="p-4 bg-brand-light/50 rounded-lg border-l-4 border-brand-primary"><p class="font-semibold text-brand-text">Running Efficient Meetings</p><p class="text-sm text-slate-600">Use the framework to keep discussions on track and ensure every meeting ends with clear actions.</p></div><div class="p-4 bg-brand-light/50 rounded-lg border-l-4 border-brand-primary"><p class="font-semibold text-brand-text">Making Clear Requests</p><p class="text-sm text-slate-600">Formulate requests to colleagues or other departments that are easy to understand and act upon.</p></div></div>`}
+                        application: { title: "Application", content: `<h3 class="text-xl font-bold text-slate-900">How You'll Apply DISA™</h3><p class="mt-4 text-slate-600">In SD 101, the focus is on mastering the core application of the framework for daily communication challenges.</p><div class="mt-6 space-y-4"><div class="p-4 bg-indigo-100/50 rounded-lg border-l-4 border-indigo-700"><p class="font-semibold text-indigo-900">Giving & Receiving Feedback</p><p class="text-sm text-slate-600">Structure feedback that is clear, objective, and focused on solutions, not blame.</p></div><div class="p-4 bg-indigo-100/50 rounded-lg border-l-4 border-indigo-700"><p class="font-semibold text-indigo-900">Running Efficient Meetings</p><p class="text-sm text-slate-600">Use the framework to keep discussions on track and ensure every meeting ends with clear actions.</p></div><div class="p-4 bg-indigo-100/50 rounded-lg border-l-4 border-indigo-700"><p class="font-semibold text-indigo-900">Making Clear Requests</p><p class="text-sm text-slate-600">Formulate requests to colleagues or other departments that are easy to understand and act upon.</p></div></div>`}
                     }
                 },
                 sd201: {
@@ -314,7 +311,7 @@
                      tabs: {
                         overview: { title: "Overview", content: `<h3 class="text-xl font-bold text-slate-900">Course Overview</h3><p class="mt-4 text-slate-600">This advanced half-day workshop is for graduates of SD 101 in leadership roles. It equips managers with advanced applications of the <strong>DISA™ Framework</strong> for the highest-stakes leadership challenges: performance management, team alignment, and leading organizational change.</p><div class="mt-6 grid md:grid-cols-2 gap-6"><div><h4 class="font-semibold text-slate-800">Target Audience</h4><p class="text-slate-600">Team Leads, Managers, Directors, VPs</p></div><div><h4 class="font-semibold text-slate-800">Duration</h4><p class="text-slate-600">4 Hours (Half-Day Workshop)</p></div></div><h4 class="mt-6 font-semibold text-slate-800">Learning Outcomes</h4><ul class="mt-2 list-disc list-inside text-slate-600 space-y-1"><li>Deliver difficult performance feedback that inspires growth, not defensiveness.</li><li>Mediate team conflicts by guiding participants through the DISA™ model.</li><li>Communicate unpopular corporate decisions with clarity and authority.</li><li>Delegate tasks with crystal-clear expectations and accountability.</li></ul>`},
                         curriculum: { title: "Curriculum", content: `<h3 class="text-xl font-bold text-slate-900">Leadership Workshop Agenda</h3><ul class="mt-4 space-y-4"><li class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold text-slate-800">Module 1: The Feedback Conversation</p><p class="text-sm text-slate-600">Advanced role-play focusing on structuring constructive feedback with a clear, positive Strategic Intent.</p></li><li class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold text-slate-800">Module 2: Mediating Team Conflict</p><p class="text-sm text-slate-600">Learn to act as a neutral facilitator, guiding conflicting parties through the DISA framework to find their own resolution.</p></li><li class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold text-slate-800">Module 3: Communicating Change</p><p class="text-sm text-slate-600">Scripting and delivering clear, empathetic, and authoritative messages for top-down change initiatives like re-orgs or budget cuts.</p></li></ul>`},
-                        application: { title: "Application", content: `<h3 class="text-xl font-bold text-slate-900">Leadership Application of DISA™</h3><p class="mt-4 text-slate-600">Leaders will apply DISA™ to conversations where the stakes are highest and clarity is paramount.</p><div class="mt-6 space-y-4"><div class="p-4 bg-brand-light/50 rounded-lg border-l-4 border-brand-primary"><p class="font-semibold text-brand-text">Performance Reviews</p><p class="text-sm text-slate-600">Gather comprehensive data and articulate the impact of behavior on team goals, setting clear plans for improvement.</p></div><div class="p-4 bg-brand-light/50 rounded-lg border-l-4 border-brand-primary"><p class="font-semibold text-brand-text">Team Alignment</p><p class="text-sm text-slate-600">Use the framework to align teams with competing priorities around a shared Strategic Intent.</p></div><div class="p-4 bg-brand-light/50 rounded-lg border-l-4 border-brand-primary"><p class="font-semibold text-brand-text">Delegation</p<p class="text-sm text-slate-600">Delegate tasks with a clear Actionable Step, ensuring full accountability and flawless execution.</p></div></div>`}
+                        application: { title: "Application", content: `<h3 class="text-xl font-bold text-slate-900">Leadership Application of DISA™</h3><p class="mt-4 text-slate-600">Leaders will apply DISA™ to conversations where the stakes are highest and clarity is paramount.</p><div class="mt-6 space-y-4"><div class="p-4 bg-indigo-100/50 rounded-lg border-l-4 border-indigo-700"><p class="font-semibold text-indigo-900">Performance Reviews</p><p class="text-sm text-slate-600">Gather comprehensive data and articulate the impact of behavior on team goals, setting clear plans for improvement.</p></div><div class="p-4 bg-indigo-100/50 rounded-lg border-l-4 border-indigo-700"><p class="font-semibold text-indigo-900">Team Alignment</p><p class="text-sm text-slate-600">Use the framework to align teams with competing priorities around a shared Strategic Intent.</p></div><div class="p-4 bg-indigo-100/50 rounded-lg border-l-4 border-indigo-700"><p class="font-semibold text-indigo-900">Delegation</p<p class="text-sm text-slate-600">Delegate tasks with a clear Actionable Step, ensuring full accountability and flawless execution.</p></div></div>`}
                     }
                 },
                 sd301: {
@@ -322,7 +319,7 @@
                     tabs: {
                         overview: { title: "Overview", content: `<h3 class="text-xl font-bold text-slate-900">Course Overview</h3><p class="mt-4 text-slate-600">This two-day intensive certification program is for senior leaders and HR partners who want to become true masters and internal champions of Strategic Dialogue™. Participants move from being practitioners to being coaches, capable of embedding the <strong>DISA™ Framework</strong> into the company culture.</p><div class="mt-6 grid md:grid-cols-2 gap-6"><div><h4 class="font-semibold text-slate-800">Target Audience</h4><p class="text-slate-600">Senior Leaders, HR Business Partners, Internal Trainers</p></div><div><h4 class="font-semibold text-slate-800">Duration</h4><p class="text-slate-600">2 Days (16 Hours)</p></div></div><h4 class="mt-6 font-semibold text-slate-800">Learning Outcomes</h4><ul class="mt-2 list-disc list-inside text-slate-600 space-y-1"><li>Listen for and diagnose communication breakdowns using the DISA™ framework.</li><li>Coach others to find their own solutions by helping them articulate their DISA statement.</li><li>Structure and lead contentious, high-stakes meetings to productive outcomes.</li><li>Model and champion the principles of Strategic Dialogue™ across the organization.</li></ul>`},
                         curriculum: { title: "Curriculum", content: `<h3 class="text-xl font-bold text-slate-900">Mastery Workshop Agenda</h3><ul class="mt-4 space-y-4"><li class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold text-slate-800">Day 1: Mastering the Art of Coaching</p><p class="text-sm text-slate-600">Focuses on the mindset shift from practitioner to coach. Learn powerful questioning techniques and practice coaching through resistance in live sessions.</p></li><li class="p-4 bg-slate-50 rounded-lg"><p class="font-semibold text-slate-800">Day 2: Mastering High-Stakes Facilitation</p><p class="text-sm text-slate-600">Learn to use DISA™ to structure meeting agendas for contentious topics. The day culminates in a live, multi-stakeholder facilitation exercise for certification.</p></li></ul>`},
-                        application: { title: "Application", content: `<h3 class="text-xl font-bold text-slate-900">Coaching & Facilitation Application</h3><p class="mt-4 text-slate-600">Graduates of SD 301 become internal experts, applying DISA™ at a systemic level.</p><div class="mt-6 space-y-4"><div class="p-4 bg-brand-light/50 rounded-lg border-l-4 border-brand-primary"><p class="font-semibold text-brand-text">One-on-One Coaching</p><p class="text-sm text-slate-600">Help colleagues and direct reports find clarity on their own challenges by guiding them through the framework.</p></div><div class="p-4 bg-brand-light/50 rounded-lg border-l-4 border-brand-primary"><p class="font-semibold text-brand-text">Group Facilitation</p><p class="text-sm text-slate-600">Lead cross-functional meetings on difficult topics, ensuring the process remains structured, fair, and productive.</p></div><div class="p-4 bg-brand-light/50 rounded-lg border-l-4 border-brand-primary"><p class="font-semibold text-brand-text">Cultural Ambassadorship</p><p class="text-sm text-slate-600">Act as a champion for clear communication, embedding the DISA™ language and principles into your team and the wider organization.</p></div></div>`}
+                        application: { title: "Application", content: `<h3 class="text-xl font-bold text-slate-900">Coaching & Facilitation Application</h3><p class="mt-4 text-slate-600">Graduates of SD 301 become internal experts, applying DISA™ at a systemic level.</p><div class="mt-6 space-y-4"><div class="p-4 bg-indigo-100/50 rounded-lg border-l-4 border-indigo-700"><p class="font-semibold text-indigo-900">One-on-One Coaching</p><p class="text-sm text-slate-600">Help colleagues and direct reports find clarity on their own challenges by guiding them through the framework.</p></div><div class="p-4 bg-indigo-100/50 rounded-lg border-l-4 border-indigo-700"><p class="font-semibold text-indigo-900">Group Facilitation</p><p class="text-sm text-slate-600">Lead cross-functional meetings on difficult topics, ensuring the process remains structured, fair, and productive.</p></div><div class="p-4 bg-indigo-100/50 rounded-lg border-l-4 border-indigo-700"><p class="font-semibold text-indigo-900">Cultural Ambassadorship</p><p class="text-sm text-slate-600">Act as a champion for clear communication, embedding the DISA™ language and principles into your team and the wider organization.</p></div></div>`}
                     }
                 }
             };
@@ -380,7 +377,7 @@
                 { role: 'leadership', title: 'Team Alignment', description: 'Use the framework to align teams with competing priorities around a shared Strategic Intent.' },
                 { role: 'leadership', title: 'Delegation', description: 'Delegate tasks with a clear Actionable Step, ensuring full accountability and flawless execution.' },
                 { role: 'sales', title: 'Client Negotiations', description: 'Present objective market data and explain the business impact of your proposed solution to justify terms.' },
-                { role: 'sales', title: 'Needs Discovery', description: 'Quote a client\'s own words to align your intent with their strategic goals, building deep trust.' },
+                { role: 'sales', title: 'Needs Discovery', description: 'Quote a client's own words to align your intent with their strategic goals, building deep trust.' },
                 { role: 'sales', title: 'Closing Deals', description: 'Define a clear, compelling "next step" for the client to move the sales process forward decisively.' },
                 { role: 'technical', title: 'Code & Peer Review', description: 'Cite specific, objective technical details and state a positive intent to strengthen the code and share knowledge, not criticize.' },
                 { role: 'technical', title: 'Project Meetings', description: 'Agree on specific follow-ups, owners, and deadlines to ensure every meeting ends with an actionable plan.' },
