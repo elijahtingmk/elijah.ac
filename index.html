@@ -1,305 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elijah Ting | Corporate Trainer</title>
+    <title>Elijah Ting | Corporate Training | The Art of Connection</title>
     <!-- Favicon Links -->
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
-    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+    <link rel="icon" type="image/png" href="https://placehold.co/96x96/1e3a8a/ffffff?text=ET" sizes="96x96" />
+    <link rel="shortcut icon" href="https://placehold.co/32x32/1e3a8a/ffffff?text=ET" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://placehold.co/180x180/1e3a8a/ffffff?text=ET" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        .swoosh-bg {
+        .gradient-bg {
+            background-color: #f8fafc; /* slate-50 */
             background-image: 
-                radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 52% 99%, hsla(355, 98%, 71%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 10% 29%, hsla(256, 96%, 68%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.1) 0px, transparent 50%);
+                radial-gradient(at 15% 20%, hsla(223, 67%, 32%, 0.05) 0px, transparent 50%),
+                radial-gradient(at 85% 70%, hsla(223, 67%, 32%, 0.07) 0px, transparent 50%);
+        }
+        .brand-text {
+            color: #1e40af; /* blue-800 */
+        }
+        .cta-button-primary {
+            @apply bg-blue-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900 transition duration-300 shadow-md;
+        }
+        .cta-button-secondary {
+            @apply bg-white text-blue-800 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition duration-300 shadow-md ring-1 ring-inset ring-slate-300;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-50 text-slate-700 antialiased">
 
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-gray-900">
-                <a href="index.html">Elijah Ting</a>
-            </div>
+    <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-900">
+                Elijah Ting
+            </a>
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-blue-900 transition duration-300">About Me</a>
-                <a href="#programs" class="text-gray-600 hover:text-blue-900 transition duration-300">Training Programs</a>
-                <a href="#tools" class="text-gray-600 hover:text-blue-900 transition duration-300">Tools</a>
-                <a href="#testimonials" class="text-gray-600 hover:text-blue-900 transition duration-300">Testimonials</a>
-                <a href="#contact" class="bg-blue-900 text-white px-4 py-2 rounded-md hover:bg-blue-900 transition duration-300">Let's Collaborate</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#problem" class="text-slate-600 hover:text-blue-800 transition duration-300">The Problem</a>
+                <a href="#program" class="text-slate-600 hover:text-blue-800 transition duration-300">The Program</a>
+                <a href="#guide" class="text-slate-600 hover:text-blue-800 transition duration-300">Your Guide</a>
+                <a href="#testimonials" class="text-slate-600 hover:text-blue-800 transition duration-300">Testimonials</a>
+                <a href="#faq" class="text-slate-600 hover:text-blue-800 transition duration-300">FAQ</a>
+            </div>
+             <div class="hidden md:block">
+                 <a href="#contact" class="bg-blue-800 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-900 transition duration-300 shadow-sm text-sm">Book a Consultation</a>
             </div>
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                <button id="mobile-menu-button" class="text-slate-900 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
-            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-900">About Me</a>
-            <a href="#programs" class="block py-2 text-gray-600 hover:text-blue-900">Training Programs</a>
-            <a href="#tools" class="block py-2 text-gray-600 hover:text-blue-900">Tools</a>
-            <a href="#testimonials" class="block py-2 text-gray-600 hover:text-blue-900">Testimonials</a>
-            <a href="#contact" class="block mt-2 bg-blue-900 text-white text-center px-4 py-2 rounded-md hover:bg-blue-900">Let's Collaborate</a>
+            <a href="#problem" class="block py-2 text-slate-600 hover:text-blue-800">The Problem</a>
+            <a href="#program" class="block py-2 text-slate-600 hover:text-blue-800">The Program</a>
+            <a href="#guide" class="block py-2 text-slate-600 hover:text-blue-800">Your Guide</a>
+            <a href="#testimonials" class="block py-2 text-slate-600 hover:text-blue-800">Testimonials</a>
+            <a href="#faq" class="block py-2 text-slate-600 hover:text-blue-800">FAQ</a>
+            <a href="#contact" class="block mt-2 bg-blue-800 text-white text-center px-4 py-2 rounded-lg font-semibold hover:bg-blue-900">Book a Consultation</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="swoosh-bg py-20 md:py-32">
+        <section class="gradient-bg py-20 md:py-28">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">Elijah Ting (Ting Moi Kieng)</h1>
-                <p class="mt-4 text-lg md:text-xl text-blue-900 font-semibold">Corporate Trainer</p>
-                <p class="mt-2 text-md md:text-lg text-gray-600 max-w-3xl mx-auto">Helping organizations drive performance by turning conversations into strategic assets through the Strategic Dialogue™ framework.</p>
+                <span class="inline-block bg-green-100 text-green-800 text-sm font-bold px-4 py-1.5 rounded-full mb-4">HRD CORP CLAIMABLE</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight">Unlock High-Performance Teams With <br class="hidden md:block"/> <span class="brand-text">The Art of Connection.</span></h1>
+                <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">A corporate training program designed to solve costly communication issues, improve leadership impact, and build a culture of trust and collaboration.</p>
             </div>
         </section>
 
-       <section id="about" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-        
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="flex justify-center items-center">
-                <img src="assets/images/profile-photo.jpg" alt="Portrait of Elijah Ting" class="w-80 h-80 rounded-full object-cover border-4 border-white shadow-xl"> 
-            </div>
-            <div>
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Who is Elijah?</h2>
-                <p class="text-gray-600 mb-4">Elijah Ting is a corporate trainer who helps organizations solve their most expensive problems—the ones caused by unclear communication.</p>
-                <p class="text-gray-600 mb-6">He has developed Strategic Dialogue™, a system that enhances leadership impact by equipping teams with the powerful DISA™ Framework for driving performance and accountability.</p>
-                <a href="about.html" class="inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-900 transition duration-300 shadow-md">Read My Full Bio</a>
-            </div>
-        </div>
-
-        <div class="mt-20">
-            <div class="bg-gray-100 p-8 rounded-lg shadow-md">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Education & Qualifications</h3>
-                <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6 max-w-4xl mx-auto">
-                    
-                    <div class="space-y-4">
-                        <h4 class="text-xl font-semibold text-gray-700 border-b pb-2">Education</h4>
-                        <div class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422A12.083 12.083 0 0121 12c0 6.627-5.373 12-12 12S3 18.627 3 12a12.083 12.083 0 012.84-6.422L12 14z"></path></svg>
-                            <div>
-                                <h5 class="font-semibold">Executive Master of Business Administration</h5>
-                                <p class="text-sm text-gray-500">Quantic School of Business and Technology, 2020</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                             <svg class="w-6 h-6 text-blue-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-9-8.994v10.994l9-5.5-9-5.5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.253v8.994l-9 5.5-9-5.5V3.253l9 5.5 9-5.5z"></path></svg>
-                            <div>
-                                <h5 class="font-semibold">Master of Divinity</h5>
-                                <p class="text-sm text-gray-500">Methodist Theological School, 2003</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v4.517l1.557.778a2 2 0 01.89 1.789l.002 4.184a2 2 0 01-1.89 1.789l-1.557.778V20l-1 1H8l-1-1v-2.517l-1.557-.778a2 2 0 01-.89-1.789l-.002-4.184a2 2 0 011.89-1.789L8 10.517V5l-1-1z"></path></svg>
-                            <div>
-                                <h5 class="font-semibold">Bachelor of Science with Honours (Nursing)</h5>
-                                <p class="text-sm text-gray-500">Universiti Malaysia Sarawak, 2001</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="space-y-4">
-                        <h4 class="text-xl font-semibold text-gray-700 border-b pb-2">Professional Credentials</h4>
-                        <div class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                            <p class="font-semibold">HRD Corp Accredited Trainer (Malaysia)</p>
-                        </div>
-                        <div class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                            <p class="font-semibold">CERTIFIED FINANCIAL PLANNER™</p>
-                        </div>
-                        <div class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                            <p class="font-semibold">Certified Workplace Big Five Profile™ Consultant</p>
-                        </div>
-                        <div class="flex items-start">
-                            <svg class="w-6 h-6 text-blue-900 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                            <p class="font-semibold">Career Direct® Consultant</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-
-    <!-- Entrepreneurial Ventures Section -->
-    <section id="ventures" class="py-20 swoosh-bg">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Entrepreneurial Ventures</h2>
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Wisdoer Global -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col text-center">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Wisdoer Global</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">As the founder of Wisdoer Global, Elijah established a platform dedicated to professional development, which later evolved into a partnership.</p>
-                    <a href="https://wisdoer.com" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Visit Wisdoer.com</a>
-                </div>
-                <!-- Kizuna Connect -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col text-center">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Kizuna Connect</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Elijah founded Kizuna Connect to build stronger, more empathetic connections in the workplace through specialized training and resources.</p>
-                    <a href="https://kizuna.my" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Visit Kizuna.my</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Programs Section -->
-   <section id="services" class="py-20 px-6 bg-gray-50"> <div class="container mx-auto max-w-6xl">
-        <h2 class="text-center text-4xl font-bold text-gray-900 mb-4">Signature Programs</h2> <p class="text-center text-2xl text-gray-900 mb-16"> <span class="font-bold">Strategic Dialogue™ Professional Development</span>
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <a href="https://elijah.ac/sd" target="_blank" rel="noopener noreferrer" class="block bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300"> <div class="flex items-center justify-between space-x-3 mb-4">
-                    <div class="flex items-center space-x-3">
-                        <i data-lucide="briefcase" class="w-6 h-6 text-indigo-600"></i> <h3 class="text-xl font-bold text-gray-900">SD 101: Strategic Dialogue™ Foundations</h3> </div>
-                    <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full">HRD Corp Claimable</span> </div>
-                <p class="text-gray-600">The essential starting point for all employees. This workshop establishes a universal language for clear, objective, and productive communication using the DISA™ Framework.</p> </a>
-            <a href="https://elijah.ac/sd" target="_blank" rel="noopener noreferrer" class="block bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-                <div class="flex items-center justify-between space-x-3 mb-4">
-                    <div class="flex items-center space-x-3">
-                        <i data-lucide="briefcase" class="w-6 h-6 text-indigo-600"></i>
-                        <h3 class="text-xl font-bold text-gray-900">SD 201: Strategic Dialogue™ for Leaders</h3>
-                    </div>
-                    <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full">HRD Corp Claimable</span>
-                </div>
-                <p class="text-gray-600">Equips managers and leaders with advanced applications of DISA™ for performance management, team alignment, conflict mediation, and leading organizational change.</p>
-            </a>
-            <a href="https://elijah.ac/sd" target="_blank" rel="noopener noreferrer" class="block bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-                <div class="flex items-center justify-between space-x-3 mb-4">
-                    <div class="flex items-center space-x-3">
-                        <i data-lucide="briefcase" class="w-6 h-6 text-indigo-600"></i>
-                        <h3 class="text-xl font-bold text-gray-900">SD 301: Strategic Dialogue™ for Coach & Facilitator</h3>
-                    </div>
-                    <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full">HRD Corp Claimable</span>
-                </div>
-                <p class="text-gray-600">A two-day intensive for senior leaders and HR partners to become internal champions, capable of coaching others and facilitating the most complex, high-stakes conversations.</p>
-            </a>
-        </div>
-
-        <p class="text-center text-2xl text-gray-900 mt-20 mb-16">
-            <span class="font-bold">The Art of Connection - Effective Communication Skills for Professionals</span>
-        </p>
-        <div class="flex justify-center">
-            <a href="https://elijah.ac/aoc" target="_blank" rel="noopener noreferrer" class="block bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 max-w-lg">
-                <div class="flex items-center justify-between space-x-3 mb-4">
-                    <div class="flex items-center space-x-3">
-                        <i data-lucide="users" class="w-6 h-6 text-indigo-600"></i>
-                        <h3 class="text-xl font-bold text-gray-900">The Art of Connection</h3>
-                    </div>
-                    <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full">HRD Corp Claimable</span>
-                </div>
-                <p class="text-gray-600">A transformative program designed to equip professionals with essential communication skills to foster empathy, understanding, and collaboration in the workplace.</p>
-            </a>
-        </div>
-    </div>
-</section>
-
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
-
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
-
-
-    <section id="tools" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Tools & Resources</h2>
-        <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <div class="bg-blue-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Asking Right Questions Tool</h3>
-                <p class="text-gray-600 mb-6 flex-grow">A practical guide to formulating powerful questions that unlock insight, drive clarity, and lead to better solutions.</p>
-                <a href="arq.html" class="mt-auto inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-900 transition duration-300">Explore the Tool</a>
-            </div>
-            <div class="bg-blue-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Storytelling Coach GPT</h3>
-                <p class="text-gray-600 mb-6 flex-grow">Elevate your narrative skills with personalized, AI-powered guidance on structure, delivery, and impact.</p>
-                <a href="https://chatgpt.com/g/g-jXwWYgjvc-storytelling-coach" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-900 transition duration-300">Start Coaching</a>
-            </div>
-            <div class="bg-blue-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Nonviolent Communication</h3>
-                <p class="text-gray-600 mb-6 flex-grow">Learn the language of compassion to resolve conflicts peacefully and build deeper, more authentic connections.</p>
-                <a href="https://nvc.my" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-900 transition duration-300">Discover NVC</a>
-            </div>
-        </div>
-    </div>
-    </section>
-
-        <!-- Testimonials -->
-        <section id="testimonials" class="py-20 swoosh-bg">
+       <!-- The Problem Section -->
+       <section id="problem" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">What Clients Say</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <p class="text-gray-600 italic">"Thank you Elijah Ting! For the 5 days of training us to be the best trainer versions of ourselves. Your personal story on your training journey has been very inspiring."</p>
-                        <p class="mt-4 font-semibold text-right text-gray-800">- KK, Training Participant</p>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="flex justify-center">
+                        <img src="assets/images/profile-photo.JPG" alt="Corporate team looking disengaged in a meeting" class="rounded-2xl object-cover shadow-2xl w-full h-full max-h-[450px]"> 
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <p class="text-gray-600 italic">"Thank you for guiding us throughout and the joyful learning sessions."</p>
-                        <p class="mt-4 font-semibold text-right text-gray-800">- CL, Training Participant</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <p class="text-gray-600 italic">"Muy bueno y con geniales ideas para las historias (Very good and with great ideas for stories)"</p>
-                        <p class="mt-4 font-semibold text-right text-gray-800">- Spanish User on Storytelling Coach GPT</p>
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-4">The High Cost of Poor Communication</h2>
+                        <p class="text-slate-600 mb-4 text-lg">Disengaged teams, missed deadlines, and low morale aren't just culture problems—they are expensive business problems. Most often, they stem from a lack of genuine connection and clear communication.</p>
+                        <p class="text-slate-600 mb-6 text-lg">As a corporate trainer with a diverse background in business, leadership, and communication, I provide a unique perspective to solve these deep-rooted issues. I don't just teach theory; I equip your team with practical frameworks to foster empathy, build trust, and drive performance.</p>
                     </div>
                 </div>
             </div>
         </section>
         
+        <!-- The Program Section -->
+        <section id="program" class="py-20 gradient-bg">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-slate-900 mb-3">The Art of Connection: A Program for Results</h2>
+                    <p class="text-lg text-slate-600">This isn't a lecture. It's an interactive, hands-on workshop that delivers measurable improvements in how your team communicates, collaborates, and leads.</p>
+                </div>
+                
+                <div class="mt-12 grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                     <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-200">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-6">Key Learning Outcomes:</h3>
+                        <ul class="space-y-5 text-lg">
+                            <li class="flex items-start gap-3"><i data-lucide="shield-check" class="w-6 h-6 text-blue-700 flex-shrink-0 mt-1"></i><span><span class="font-semibold text-slate-900">Improve Leadership Impact</span> by communicating with clarity and empathy.</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="bar-chart-3" class="w-6 h-6 text-blue-700 flex-shrink-0 mt-1"></i><span><span class="font-semibold text-slate-900">Increase Team Performance</span> through enhanced collaboration and psychological safety.</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="trending-up" class="w-6 h-6 text-blue-700 flex-shrink-0 mt-1"></i><span><span class="font-semibold text-slate-900">Boost Employee Retention</span> by creating a culture where people feel heard and valued.</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="users" class="w-6 h-6 text-blue-700 flex-shrink-0 mt-1"></i><span><span class="font-semibold text-slate-900">Strengthen Client Relationships</span> through active listening and trust-building.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Your Guide Section -->
+        <section id="guide" class="py-20 bg-slate-800 text-white">
+            <div class="container mx-auto px-6">
+                 <div class="grid md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-2 flex justify-center">
+                        <img src="assets/images/profile-photo-2.JPG" alt="Portrait of Elijah Ting, Corporate Trainer" class="w-64 h-64 rounded-full object-cover shadow-2xl ring-4 ring-slate-700"> 
+                    </div>
+                    <div class="md:col-span-3">
+                        <h2 class="text-3xl font-bold mb-4">Meet Your Guide: Elijah Ting</h2>
+                        <p class="text-slate-300 mb-4 text-lg">My diverse background in business, leadership, and communication gives me a unique lens on the human dynamics that drive corporate success. I understand both the data-driven needs of an organization and the deeply human need for connection.</p>
+                        <p class="text-slate-300 mb-6 text-lg">I've seen firsthand how communication breakdowns create costly problems. My role is not just to teach, but to guide your team through a transformative process, equipping them with proven frameworks to build trust, foster empathy, and achieve your business objectives.</p>
+                        <div class="flex flex-wrap gap-3 text-sm">
+                            <span class="bg-blue-200 text-blue-800 font-medium px-3 py-1.5 rounded-full">Executive MBA</span>
+                            <span class="bg-blue-200 text-blue-800 font-medium px-3 py-1.5 rounded-full">HRD Corp Accredited Trainer</span>
+                            <span class="bg-blue-200 text-blue-800 font-medium px-3 py-1.5 rounded-full">CERTIFIED FINANCIAL PLANNER™</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 gradient-bg">
+            <div class="container mx-auto px-6">
+                 <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">What Our Clients Say</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                        <p class="text-slate-600 italic leading-relaxed">"Thank you Elijah Ting, for the 5 days of training us to be the best trainer versions of ourselves. Your personal story on your training journey has been very inspiring."</p>
+                        <div class="mt-4 pt-4 border-t border-slate-200"><p class="font-semibold text-slate-800">KK, Training Participant</p></div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
+                        <p class="text-slate-600 italic leading-relaxed">"Thank you for guiding us throughout the joyful learning sessions."</p>
+                        <div class="mt-4 pt-4 border-t border-slate-200"><p class="font-semibold text-slate-800">CL, Training Participant</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white" x-data="{ open: 1 }">
+            <div class="container mx-auto px-6 max-w-4xl">
+                 <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="border-b border-slate-200 pb-4">
+                        <button @click="open = (open === 1 ? 0 : 1)" class="w-full flex justify-between items-center text-left text-xl font-semibold text-slate-800">
+                            <span>Is this program claimable under HRD Corp?</span>
+                            <i data-lucide="chevron-down" class="transition-transform" :class="open === 1 && 'rotate-180'"></i>
+                        </button>
+                        <div x-show="open === 1" x-collapse class="pt-2 text-slate-600">
+                            <p>Yes, "The Art of Connection" is fully claimable for eligible companies registered with the Human Resource Development Corporation (HRD Corp) in Malaysia.</p>
+                        </div>
+                    </div>
+                     <div class="border-b border-slate-200 pb-4">
+                        <button @click="open = (open === 2 ? 0 : 2)" class="w-full flex justify-between items-center text-left text-xl font-semibold text-slate-800">
+                            <span>Can the program be customized to our industry/company?</span>
+                            <i data-lucide="chevron-down" class="transition-transform" :class="open === 2 && 'rotate-180'"></i>
+                        </button>
+                        <div x-show="open === 2" x-collapse class="pt-2 text-slate-600">
+                            <p>Absolutely. While the core framework is universal, I tailor the case studies, role-playing scenarios, and examples to be directly relevant to your industry and specific organizational challenges.</p>
+                        </div>
+                    </div>
+                     <div class="border-b border-slate-200 pb-4">
+                        <button @click="open = (open === 3 ? 0 : 3)" class="w-full flex justify-between items-center text-left text-xl font-semibold text-slate-800">
+                            <span>Do you offer virtual or in-person sessions?</span>
+                            <i data-lucide="chevron-down" class="transition-transform" :class="open === 3 && 'rotate-180'"></i>
+                        </button>
+                        <div x-show="open === 3" x-collapse class="pt-2 text-slate-600">
+                            <p>I offer both. We can conduct the workshop in-person at your location or a venue of your choice, or deliver it as a highly interactive, engaging virtual session for remote or distributed teams.</p>
+                        </div>
+                    </div>
+                     <div class="border-b border-slate-200 pb-4">
+                        <button @click="open = (open === 4 ? 0 : 4)" class="w-full flex justify-between items-center text-left text-xl font-semibold text-slate-800">
+                            <span>What is the ideal group size for a workshop?</span>
+                            <i data-lucide="chevron-down" class="transition-transform" :class="open === 4 && 'rotate-180'"></i>
+                        </button>
+                        <div x-show="open === 4" x-collapse class="pt-2 text-slate-600">
+                            <p>To ensure maximum interactivity and personal attention, the ideal group size is between 12 to 20 participants per session. However, we can accommodate larger groups with adjusted formats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-blue-900 text-white">
+        <section id="contact" class="py-20 bg-slate-800 text-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold">Let's Collaborate</h2>
-                <p class="mt-4 text-lg max-w-2xl mx-auto text-blue-100">Ready to transform your organization's communication culture? Contact me today to discuss your training needs and discover how we can create lasting positive change in your workplace.</p>
-                <a href="https://wa.me/message/DTN4ST4TTRBWG1" target="_blank" rel="noopener noreferrer" class="mt-8 inline-block bg-white text-blue-900 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300 shadow-md">Get In Touch</a>
+                <h2 class="text-4xl font-bold">Invest in Your Most Valuable Asset: Your People.</h2>
+                <p class="mt-4 text-lg max-w-2xl mx-auto text-slate-300">Stop letting miscommunication create unnecessary costs. Schedule a complimentary, no-obligation consultation to discover how 'The Art of Connection' can be tailored for your organization.</p>
+                <a href="https://wa.me/message/DTN4ST4TTRBWG1" target="_blank" rel="noopener noreferrer" class="mt-8 cta-button-primary inline-flex items-center gap-2 text-lg">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    Book Your Free Consultation
+                </a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-400 py-8">
+    <footer class="bg-slate-900 text-slate-400 py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Ting Moi Kieng. All Rights Reserved.</p>
+            <p>&copy; 2025 Ting Moi Kieng (Elijah Ting). All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-    // --- Mobile Menu Toggle ---
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+        // --- Lucide Icons ---
+        lucide.createIcons();
 
-    // 👇 ADD THIS CHECK to prevent the script from crashing if these elements aren't on the page.
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }   
-</script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 </html>
